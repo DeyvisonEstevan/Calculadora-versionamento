@@ -52,11 +52,13 @@ export default function App() {
         calculator()
         return
       case '+/-':
+        setLastNumber((currentNumber * -1))
+        setCurrentNumber((currentNumber * -1).toString())
         return
-        case '%':
-          setLastNumber(currentNumber + " % ")
-          setCurrentNumber((currentNumber / 100).toString())
-          return
+      case '%':
+        setLastNumber(currentNumber + " % ")
+        setCurrentNumber((currentNumber / 100).toString())
+        return
     }
 
     setCurrentNumber(currentNumber + buttonPressed)
